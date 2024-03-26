@@ -1,2 +1,2 @@
 # Pothth
-A multiplayer cards game developed using Godot Engine
+A multiplayer playing cards game developed using Godot Engine
