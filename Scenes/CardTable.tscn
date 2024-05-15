@@ -15,33 +15,33 @@ offset_bottom = 648.0
 [node name="ShuffleDeck" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 128.0
-offset_top = 192.0
+offset_top = 64.0
 offset_right = 352.0
-offset_bottom = 256.0
+offset_bottom = 128.0
 text = "Shuffle"
 
 [node name="Draw" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 128.0
-offset_top = 320.0
+offset_top = 192.0
 offset_right = 352.0
-offset_bottom = 384.0
+offset_bottom = 256.0
 text = "Draw"
 
 [node name="Output" type="Button" parent="Panel"]
 layout_mode = 0
 offset_left = 128.0
-offset_top = 448.0
+offset_top = 320.0
 offset_right = 352.0
-offset_bottom = 512.0
+offset_bottom = 384.0
 text = "Show Player Decks"
 
 [node name="ShowDeck" type="Button" parent="Panel"]
 layout_mode = 0
-offset_left = 386.0
-offset_top = 331.0
-offset_right = 536.0
-offset_bottom = 375.0
+offset_left = 128.0
+offset_top = 448.0
+offset_right = 352.0
+offset_bottom = 512.0
 text = "Show Deck"
 
 [node name="OutputBox" type="RichTextLabel" parent="Panel"]
@@ -52,7 +52,26 @@ offset_right = 1088.0
 offset_bottom = 608.0
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 
+[node name="DisplayCard" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 576.0
+offset_right = 256.0
+offset_bottom = 640.0
+text = "Display Decks"
+
+[node name="BackToggle" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 592.0
+offset_right = 325.0
+offset_bottom = 623.0
+toggle_mode = true
+text = "Back"
+
 [connection signal="button_down" from="Panel/ShuffleDeck" to="." method="_on_shuffle_deck_button_down"]
 [connection signal="button_down" from="Panel/Draw" to="." method="_on_draw_button_down"]
 [connection signal="button_down" from="Panel/Output" to="." method="_on_output_button_down"]
 [connection signal="button_down" from="Panel/ShowDeck" to="." method="_on_show_deck_button_down"]
+[connection signal="button_down" from="Panel/DisplayCard" to="." method="_on_display_card_button_down"]
+[connection signal="button_down" from="Panel/BackToggle" to="." method="_on_back_toggle_button_down"]

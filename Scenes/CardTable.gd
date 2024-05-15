@@ -2,7 +2,8 @@ extends Control
 #const Deck = preload("res://UtilClasses/deck_class.gd")
 var deck = Deck.new()
 var players_decks = []
-
+var card = preload("res://Components/Card.tscn")
+#var new_card = card.instantiate()
 @export var number_of_players = 3
 @export var number_of_cards = 5
 
@@ -39,3 +40,17 @@ func _on_show_deck_button_down():
 	for card in deck.cards:
 		deck_text += card._to_string() + "\n"
 	$Panel/OutputBox.text = deck_text
+
+
+func _on_display_card_button_down():
+	const offset_x = 50
+	for i in range(number_of_players):
+		var j = 800
+		for each_card in players_decks[i]:
+			var new_card = card.instantiate()
+			new_card.set_properties(each_card._to_string(),false)
+			add_child(new_card)
+			new_card.position = Vector2(j,(i*100))
+			j += offset_x
+			
+
