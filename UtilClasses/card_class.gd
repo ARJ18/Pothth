@@ -8,4 +8,4 @@ func _init(suit_in,value_in):
 	suit = suit_in
 
 func _to_string():
-	return face_value + " of " + suit
+	return face_value + "_of_" + suit

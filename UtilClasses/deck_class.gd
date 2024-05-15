@@ -8,8 +8,8 @@ func _init():
 	populate()
 
 func populate():
-	var suits = ["Hearts", "Diamonds", "Clubs", "Spades"]
-	var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]
+	var suits = ["hearts", "diamonds", "clubs", "spades"]
+	var values = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "jack", "queen", "king", "ace"]
 	for suit in suits:
 		for value in values:
 			var card = Card.new(suit, value)
