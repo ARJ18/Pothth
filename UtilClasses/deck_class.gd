@@ -1,6 +1,6 @@
 class_name Deck extends Node
 
-const Card = preload("res://UtilClasses/card_class.gd")
+const CardOBJ = preload("res://UtilClasses/card_class.gd")
 
 var cards =[]
 
@@ -14,11 +14,11 @@ func populate():
 		for value in values:
 			var card = Card.new(suit, value)
 			cards.append(card)
-			cards.append(card)
+
 
 func shuffle():
 	cards.shuffle()
-	print("Deck Shuffled")
+
 
 func deal_card():
 	if cards.size() == 0:
